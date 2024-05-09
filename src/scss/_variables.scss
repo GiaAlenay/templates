@@ -1,81 +1,118 @@
-// Override Bootstrap default variables here
-// Do not edit any of the files in /vendor/bootstrap/scss/!
+//
+// Custom AdminLTE Variables
+//
 
-// Color Variables
-// Bootstrap Color Overrides
+// Prefix for :root CSS variables and others.
+$lte-prefix:                      lte- !default;
 
-$white: #fff !default;
-$gray-100: #f8f9fc !default;
-$gray-200: #eaecf4 !default;
-$gray-300: #dddfeb !default;
-$gray-400: #d1d3e2 !default;
-$gray-500: #b7b9cc !default;
-$gray-600: #858796 !default;
-$gray-700: #6e707e !default;
-$gray-800: #5a5c69 !default;
-$gray-900: #3a3b45 !default;
-$black: #000 !default;
+// TRANSITIONS SETTINGS
+// --------------------------------------------------------
+// Transition global options
+$lte-transition-speed:            .3s !default;
+$lte-transition-fn:               ease-in-out !default;
 
-$blue: #4e73df !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #e74a3b !default;
-$orange: #fd7e14 !default;
-$yellow: #f6c23e !default;
-$green: #1cc88a !default;
-$teal: #20c9a6 !default;
-$cyan: #36b9cc !default;
+// SIDEBAR
+// --------------------------------------------------------
+$lte-sidebar-width:               250px !default;
+$lte-sidebar-breakpoint:          lg !default;
+$lte-sidebar-padding-x:           .5rem !default;
+$lte-sidebar-padding-x-compact:   .5rem !default;
+$lte-sidebar-padding-y:           .5rem !default;
+$lte-sidebar-padding-y-compact:   .25rem !default;
+$lte-sidebar-transition:          min-width $lte-transition-speed $lte-transition-fn,
+  max-width $lte-transition-speed $lte-transition-fn,
+  margin-left $lte-transition-speed $lte-transition-fn,
+  margin-right $lte-transition-speed $lte-transition-fn !default;
 
-// Custom Colors
-$brand-google: #ea4335 !default;
-$brand-facebook: #3b5998 !default;
+// SIDEBAR SKINS
+// --------------------------------------------------------
 
-// Set Contrast Threshold
-$yiq-contrasted-threshold: 195 !default;
+$lte-sidebar-hover-bg:              rgba($black, .1) !default;
+$lte-sidebar-color:                 $gray-800 !default;
+$lte-sidebar-hover-color:           $gray-900 !default;
+$lte-sidebar-active-color:          $black !default;
+$lte-sidebar-menu-active-bg:        rgba($black, .1) !default;
+$lte-sidebar-menu-active-color:     $black !default;
+$lte-sidebar-submenu-bg:            transparent !default;
+$lte-sidebar-submenu-color:         #777 !default;
+$lte-sidebar-submenu-hover-color:   $black !default;
+$lte-sidebar-submenu-hover-bg:      rgba($black, .1) !default;
+$lte-sidebar-submenu-active-color:  $gray-900 !default;
+$lte-sidebar-submenu-active-bg:     rgba($black, .1) !default;
+$lte-sidebar-header-color:          shade-color($gray-800, 5%) !default;
 
-// Typography
-$body-color: $gray-600 !default;
+// SIDEBAR MINI
+// --------------------------------------------------------
+$nav-link-padding-x-compact:      .25rem !default;
+$lte-sidebar-mini-width:          ($nav-link-padding-x + $lte-sidebar-padding-x + .8rem) * 2 !default;
+$lte-sidebar-mini-width-compact:  ($nav-link-padding-x-compact + $lte-sidebar-padding-x-compact + .8rem) * 2 !default;
+$lte-sidebar-nav-icon-width:      $lte-sidebar-mini-width - (($lte-sidebar-padding-x + $nav-link-padding-x) * 2) !default;
+$lte-sidebar-user-image-width:    $lte-sidebar-nav-icon-width + ($nav-link-padding-x * .4) !default;
 
-$font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+// MAIN HEADER
+// --------------------------------------------------------
+$nav-link-height-compact:             1.75rem !default;
+$lte-app-header-bottom-border-width:  $border-width !default;
+$lte-app-header-bottom-border-color:  var(--#{$prefix}border-color) !default;
+$lte-app-header-bottom-border:        $lte-app-header-bottom-border-width solid $lte-app-header-bottom-border-color !default;
+$lte-app-header-link-padding-y:       $navbar-padding-y !default;
+$lte-app-header-height:               ($nav-link-height + ($lte-app-header-link-padding-y * 2)) !default;
+$lte-app-header-height-compact:       ($nav-link-height-compact + ($lte-app-header-link-padding-y * 2)) !default;
 
-$font-weight-light: 300 !default;
-// $font-weight-base: 400;
-$headings-font-weight: 400 !default;
+// CONTENT PADDING
+// --------------------------------------------------------
+$lte-content-padding-y:           0 !default;
+$lte-content-padding-x:           .5rem !default;
 
-// Shadows
-$box-shadow-sm: 0 0.125rem 0.25rem 0 rgba($gray-900, .2) !default;
-$box-shadow: 0 0.15rem 1.75rem 0 rgba($gray-900, .15) !default;
-// $box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
+// MAIN CONTENT
+// --------------------------------------------------------
+$lte-app-content-bottom-area-height-sm: 3.5rem !default;
+$lte-app-content-bottom-area-height-md: 6rem !default;
+$lte-app-content-bottom-area-height-lg: 9rem !default;
+$lte-app-content-bottom-area-height-xl: 12rem !default;
 
-// Borders Radius
-$border-radius: 0.35rem !default;
-$border-color: darken($gray-200, 2%) !default;
+// MAIN FOOTER
+// --------------------------------------------------------
+$lte-app-footer-padding:           1rem !default;
+$lte-app-footer-padding-compact:   .5rem !default;
+$lte-app-footer-border-top-width:  1px !default;
+$lte-app-footer-border-top-color:  var(--#{$prefix}border-color) !default;
+$lte-app-footer-border-top:        $lte-app-footer-border-top-width solid $lte-app-footer-border-top-color !default;
+$lte-app-footer-bg:                var(--#{$prefix}body-bg) !default;
+$lte-app-footer-color:             var(--#{$prefix}secondary-color) !default;
 
-// Spacing Variables
-// Change below variable if the height of the navbar changes
-$topbar-base-height: 4.375rem !default;
-// Change below variable to change the width of the sidenav
-$sidebar-base-width: 14rem !default;
-// Change below variable to change the width of the sidenav when collapsed
-$sidebar-collapsed-width: 6.5rem !default;
+// BRAND LINK
+// --------------------------------------------------------
+$navbar-brand-padding-y-compact:   $navbar-brand-padding-y * .75 !default;
+$navbar-padding-y-compact:         $navbar-padding-y * .5 !default;
+$lte-brand-link-padding-y:         $navbar-brand-padding-y + $navbar-padding-y !default;
+$lte-brand-link-padding-y-compact: $navbar-brand-padding-y-compact + $navbar-padding-y-compact !default;
+$lte-brand-link-padding-x:         $lte-sidebar-padding-x !default;
+$lte-brand-link-padding-x-compact: $lte-sidebar-padding-x-compact !default;
+$lte-brand-link-border-buttom:    1px !default;
 
-// Card
-$card-cap-bg: $gray-100 !default;
-$card-border-color: $border-color !default;
+// CARDS
+// --------------------------------------------------------
+$lte-card-shadow: 0 0 1px rgba(var(--#{$prefix}body-color-rgb), .125), 0 1px 3px rgba(var(--#{$prefix}body-color-rgb), .2) !default;
+$lte-card-title-font-size: 1.1rem !default;
+$lte-card-title-font-weight: $font-weight-normal !default;
 
-// Adjust column spacing for symmetry
-$spacer: 1rem !default;
-$grid-gutter-width: $spacer * 1.5 !default;
+// PROGRESS BARS
+// --------------------------------------------------------
+$lte-progress-bar-border-radius: 1px !default;
 
-// Transitions
-$transition-collapse: height .15s ease !default;
+// CALLOUTS
+// --------------------------------------------------------
+$lte-callout-link-font-weight: $alert-link-font-weight !default;
 
-// Dropdowns
-$dropdown-font-size: 0.85rem !default;
-$dropdown-border-color: $border-color !default;
+// DIRECT CHAT
+// --------------------------------------------------------
+$lte-direct-chat-default-msg-bg: var(--#{$prefix}secondary-bg) !default;
+$lte-direct-chat-default-font-color: var(--#{$prefix}emphasis-color) !default;
+$lte-direct-chat-default-msg-border-color: var(--#{$prefix}border-color) !default;
 
-// Images
-$login-image: 'https://source.unsplash.com/K4mSJ7kc0As/600x800' !default;
-$register-image: 'https://source.unsplash.com/Mv9hjnEUHR4/600x800' !default;
-$password-image: 'https://source.unsplash.com/oWTW-jNGl9I/600x800' !default;
+// Z-INDEX
+// --------------------------------------------------------
+$lte-zindex-app-header:          $zindex-fixed + 4 !default;
+$lte-zindex-sidebar:             $zindex-fixed + 8 !default;
+$lte-zindex-sidebar-overlay:     $lte-zindex-sidebar - 1 !default;
